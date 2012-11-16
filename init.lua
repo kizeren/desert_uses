@@ -6,7 +6,7 @@
 -- Desert Cobble
 minetest.register_node("desert_uses:desert_cobble", {
 	description = "Desert Cobblestone",
-	tiles = {"desert_stone_desert_cobble.png"},
+	tiles = {"desert_uses_desert_cobble.png"},
 	is_ground_content = true,
 	groups = {cracky=3},
 	sounds = default.node_sound_stone_defaults(),
@@ -26,7 +26,7 @@ minetest.register_node(":default:desert_stone", {
 -- Desert stone pickaxe
 minetest.register_tool("desert_uses:pick_desert_stone", {
 	description = "Desert Stone Pickaxe",
-	inventory_image = "desert_stone_tool_desert_stonepick.png",
+	inventory_image = "desert_uses_tool_desert_stonepick.png",
 	tool_capabilities = {
 		max_drop_level=0,
 		groupcaps={
