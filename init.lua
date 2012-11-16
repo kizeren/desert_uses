@@ -29,6 +29,16 @@ minetest.register_node(":default:desert_stone", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
+-- Desert Sandstone
+minetest.register_node("desert_materials:desert_sandstone", {
+	description = "Desert Sandstone",
+	tiles = {"desert_materials_desert_sandstone.png"},
+	is_ground_content = true,
+	groups = {crumbly=2, cracky=2},
+	drop = "default:desert_sand 4",
+	sounds = default.node_sound_stone_defaults(),
+})
+
 -- Tool definitions -------------------
 -- Desert stone pickaxe
 minetest.register_tool("desert_materials:pick_desert_stone", {
@@ -83,6 +93,14 @@ minetest.register_tool("desert_materials:sword_desert_stone", {
 })
 
 -- Craft definitions -------------------
+-- Desert sandstone
+minetest.register_craft({
+	output = "desert_materials:desert_sandstone",
+	recipe = {
+		{"default:desert_sand", "default:desert_sand"},
+		{"default:desert_sand", "default:desert_sand"},
+	},
+})
 -- Desert stone pickaxe
 minetest.register_craft({
 	output = "desert_materials:pick_desert_stone",
