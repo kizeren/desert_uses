@@ -1,4 +1,4 @@
--- desert_stone mod by Menche
+-- Desert Uses (desert_uses) mod by Menche
 -- Adds the uses of normal stone to desert stone
 -- License: CC0
 
