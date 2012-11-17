@@ -1,19 +1,19 @@
--- Desert Materials (desert_materials) mod by Menche
--- Makes desert materials more useful
+-- Desert Uses (desert_uses) mod by Menche
+-- Makes deserts more useful
 -- License: LGPL
 
 -- For compatibility after rename
-minetest.register_alias("desert_uses:desert_cobble", "desert_materials:desert_cobble")
-minetest.register_alias("desert_uses:pick_desert_stone", "desert_materials:pick_desert_stone")
-minetest.register_alias("desert_uses:shovel_desert_stone", "desert_materials:shovel_desert_stone")
-minetest.register_alias("desert_uses:sword_desert_stone", "desert_materials:sword_desert_stone")
-minetest.register_alias("desert_uses:axe_desert_stone", "desert_materials:axe_desert_stone")
+minetest.register_alias("desert_uses:desert_cobble", "desert_uses:desert_cobble")
+minetest.register_alias("desert_uses:pick_desert_stone", "desert_uses:pick_desert_stone")
+minetest.register_alias("desert_uses:shovel_desert_stone", "desert_uses:shovel_desert_stone")
+minetest.register_alias("desert_uses:sword_desert_stone", "desert_uses:sword_desert_stone")
+minetest.register_alias("desert_uses:axe_desert_stone", "desert_uses:axe_desert_stone")
 
 -- Node definitions --------------------
 -- Desert Cobble
-minetest.register_node("desert_materials:desert_cobble", {
+minetest.register_node("desert_uses:desert_cobble", {
 	description = "Desert Cobblestone",
-	tiles = {"desert_materials_desert_cobble.png"},
+	tiles = {"desert_uses_desert_cobble.png"},
 	is_ground_content = true,
 	groups = {cracky=3},
 	sounds = default.node_sound_stone_defaults(),
@@ -25,14 +25,14 @@ minetest.register_node(":default:desert_stone", {
 	tiles = {"default_desert_stone.png"},
 	is_ground_content = true,
 	groups = {cracky=3},
-	drop = "desert_materials:desert_cobble",
+	drop = "desert_uses:desert_cobble",
 	sounds = default.node_sound_stone_defaults(),
 })
 
 -- Desert Sandstone
-minetest.register_node("desert_materials:desert_sandstone", {
+minetest.register_node("desert_uses:desert_sandstone", {
 	description = "Desert Sandstone",
-	tiles = {"desert_materials_desert_sandstone.png"},
+	tiles = {"desert_uses_desert_sandstone.png"},
 	is_ground_content = true,
 	groups = {crumbly=2, cracky=2},
 	drop = "default:desert_sand 4",
@@ -41,9 +41,9 @@ minetest.register_node("desert_materials:desert_sandstone", {
 
 -- Tool definitions -------------------
 -- Desert stone pickaxe
-minetest.register_tool("desert_materials:pick_desert_stone", {
+minetest.register_tool("desert_uses:pick_desert_stone", {
 	description = "Desert Stone Pickaxe",
-	inventory_image = "desert_materials_tool_desert_stonepick.png",
+	inventory_image = "desert_uses_tool_desert_stonepick.png",
 	tool_capabilities = {
 		max_drop_level=0,
 		groupcaps={
@@ -53,9 +53,9 @@ minetest.register_tool("desert_materials:pick_desert_stone", {
 })
 
 -- Desert stone shovel
-minetest.register_tool("desert_materials:shovel_desert_stone", {
+minetest.register_tool("desert_uses:shovel_desert_stone", {
 	description = "Desert Stone Shovel",
-	inventory_image = "desert_materials_tool_desert_stoneshovel.png",
+	inventory_image = "desert_uses_tool_desert_stoneshovel.png",
 	tool_capabilities = {
 		max_drop_level=0,
 		groupcaps={
@@ -65,9 +65,9 @@ minetest.register_tool("desert_materials:shovel_desert_stone", {
 })
 
 -- Desert stone axe
-minetest.register_tool("desert_materials:axe_desert_stone", {
+minetest.register_tool("desert_uses:axe_desert_stone", {
 	description = "Desert Stone Axe",
-	inventory_image = "desert_materials_tool_desert_stoneaxe.png",
+	inventory_image = "desert_uses_tool_desert_stoneaxe.png",
 	tool_capabilities = {
 		max_drop_level=0,
 		groupcaps={
@@ -78,9 +78,9 @@ minetest.register_tool("desert_materials:axe_desert_stone", {
 })
 
 -- Desert stone sword
-minetest.register_tool("desert_materials:sword_desert_stone", {
+minetest.register_tool("desert_uses:sword_desert_stone", {
 	description = "Desert Stone Sword",
-	inventory_image = "desert_materials_tool_desert_stonesword.png",
+	inventory_image = "desert_uses_tool_desert_stonesword.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=0,
@@ -95,7 +95,7 @@ minetest.register_tool("desert_materials:sword_desert_stone", {
 -- Craft definitions -------------------
 -- Desert sandstone
 minetest.register_craft({
-	output = "desert_materials:desert_sandstone",
+	output = "desert_uses:desert_sandstone",
 	recipe = {
 		{"default:desert_sand", "default:desert_sand"},
 		{"default:desert_sand", "default:desert_sand"},
@@ -103,9 +103,9 @@ minetest.register_craft({
 })
 -- Desert stone pickaxe
 minetest.register_craft({
-	output = "desert_materials:pick_desert_stone",
+	output = "desert_uses:pick_desert_stone",
 	recipe = {
-		{"desert_materials:desert_cobble", "desert_materials:desert_cobble", "desert_materials:desert_cobble"},
+		{"desert_uses:desert_cobble", "desert_uses:desert_cobble", "desert_uses:desert_cobble"},
 		{"", "default:stick", ""},
 		{"", "default:stick", ""},
 	}
@@ -113,9 +113,9 @@ minetest.register_craft({
 
 -- Desert stone shovel
 minetest.register_craft({
-	output = "desert_materials:shovel_desert_stone",
+	output = "desert_uses:shovel_desert_stone",
 	recipe = {
-		{"desert_materials:desert_cobble"},
+		{"desert_uses:desert_cobble"},
 		{"default:stick"},
 		{"default:stick"},
 	}
@@ -123,30 +123,30 @@ minetest.register_craft({
 
 -- Desert stone axe
 minetest.register_craft({
-	output = "desert_materials:axe_desert_stone",
+	output = "desert_uses:axe_desert_stone",
 	recipe = {
-		{"desert_materials:desert_cobble", "desert_materials:desert_cobble"},
-		{"desert_materials:desert_cobble", "default:stick"},
+		{"desert_uses:desert_cobble", "desert_uses:desert_cobble"},
+		{"desert_uses:desert_cobble", "default:stick"},
 		{"", "default:stick"},
 	}
 })
 
 -- Desert stone axe (flipped recipe)
 minetest.register_craft({
-	output = "desert_materials:axe_desert_stone",
+	output = "desert_uses:axe_desert_stone",
 	recipe = {
-		{"desert_materials:desert_cobble", "desert_materials:desert_cobble"},
-		{"default:stick", "desert_materials:desert_cobble"},
+		{"desert_uses:desert_cobble", "desert_uses:desert_cobble"},
+		{"default:stick", "desert_uses:desert_cobble"},
 		{"default:stick", ""},
 	}
 })
 
 -- Desert stone sword
 minetest.register_craft({
-	output = "desert_materials:sword_desert_stone",
+	output = "desert_uses:sword_desert_stone",
 	recipe = {
-		{"desert_materials:desert_cobble"},
-		{"desert_materials:desert_cobble"},
+		{"desert_uses:desert_cobble"},
+		{"desert_uses:desert_cobble"},
 		{"default:stick"},
 	}
 })
@@ -163,15 +163,15 @@ minetest.register_craft({
 minetest.register_craft({
 	type = "cooking",
 	output = "default:desert_stone",
-	recipe = "desert_materials:desert_cobble",
+	recipe = "desert_uses:desert_cobble",
 })
 
 -- Furnace
 minetest.register_craft({
 	output = "default:furnace",
 	recipe = {
-		{"desert_materials:desert_cobble", "desert_materials:desert_cobble", "desert_materials:desert_cobble"},
-		{"desert_materials:desert_cobble", "", "desert_materials:desert_cobble"},
-		{"desert_materials:desert_cobble", "desert_materials:desert_cobble", "desert_materials:desert_cobble"},
+		{"desert_uses:desert_cobble", "desert_uses:desert_cobble", "desert_uses:desert_cobble"},
+		{"desert_uses:desert_cobble", "", "desert_uses:desert_cobble"},
+		{"desert_uses:desert_cobble", "desert_uses:desert_cobble", "desert_uses:desert_cobble"},
 	}
 })
