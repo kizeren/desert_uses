@@ -2,13 +2,6 @@
 -- Makes deserts more useful
 -- License: LGPL
 
--- For compatibility after rename
-minetest.register_alias("desert_uses:desert_cobble", "desert_uses:desert_cobble")
-minetest.register_alias("desert_uses:pick_desert_stone", "desert_uses:pick_desert_stone")
-minetest.register_alias("desert_uses:shovel_desert_stone", "desert_uses:shovel_desert_stone")
-minetest.register_alias("desert_uses:sword_desert_stone", "desert_uses:sword_desert_stone")
-minetest.register_alias("desert_uses:axe_desert_stone", "desert_uses:axe_desert_stone")
-
 -- Node definitions --------------------
 -- Desert Cobble
 minetest.register_node("desert_uses:desert_cobble", {
