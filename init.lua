@@ -30,7 +30,6 @@ minetest.register_node("desert_uses:desert_sandstone", {
 	tiles = {"desert_uses_desert_sandstone.png"},
 	is_ground_content = true,
 	groups = {crumbly=2, cracky=2},
-	drop = "desert_uses_desert_sandstone",
 	sounds = default.node_sound_stone_defaults(),
 })
 
@@ -121,7 +120,9 @@ minetest.register_craft({
 
 minetest.register_craft({
 	output = "default:desert_sand 4",
-	recipe = {"desert_uses:desert_sandstone"},
+	recipe = {
+		{"desert_uses:desert_sandstone"},
+	}
 })
 
 -- Desert stone pickaxe
