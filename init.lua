@@ -2,8 +2,6 @@
 -- Makes deserts more useful
 -- License: LGPL
 
-dofile(minetest.get_modpath("desert_uses").."/stairs.lua") -- this is needed because stairs has problems with the modname
-
 -- Node definitions --------------------
 -- Desert Cobble
 minetest.register_node("desert_uses:desert_cobble", {
@@ -35,21 +33,21 @@ minetest.register_node("desert_uses:desert_sandstone", {
 
 -- Stairs -----------------------------
 -- Desert Cobble
-desert_uses.register_stair_and_slab("desert_cobble", "desert_uses:desert_cobble",
+stairs.register_stair_and_slab("desert_cobble", "desert_uses:desert_cobble",
 	{cracky=3},
 	{"desert_uses_desert_cobble.png"},
 	"Desert Cobble stair",
 	"Desert Cobble slab")
 
 -- Desert Stone
-desert_uses.register_stair_and_slab("desert_stone", "default:desert_stone",
+stairs.register_stair_and_slab("desert_stone", "default:desert_stone",
 	{cracky=3},
-	{"desert_uses_desert_stone.png"},
+	{"default_desert_stone.png"},
 	"Desert Stone stair",
 	"Desert Stone slab")
 
 -- Desert Sandstone
-desert_uses.register_stair_and_slab("desert_sandstone", "desert_uses:desert_sandstone",
+stairs.register_stair_and_slab("desert_sandstone", "desert_uses:desert_sandstone",
 	{cracky=2, crumbly=2},
 	{"desert_uses_desert_sandstone.png"},
 	"Desert Sandstone stair",
