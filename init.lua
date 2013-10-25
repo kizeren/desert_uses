@@ -31,6 +31,35 @@ minetest.register_node("desert_uses:desert_sandstone", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
+-- Desert stone brick
+minetest.register_node(":default:desert_stone_brick", {
+	description = "Desert Stone Brick",
+	tiles = {"desert_uses_desert_brick.png"},
+	 is_ground = true,
+	 groups = {crumbly=2, cracky=2},
+	 sounds = default.node_sound_stone_defaults(),
+})
+
+-- Cooking ----
+minetest.register_craft({
+	type = "cooking",
+	output = "default:desert_stone",
+	recipe = "desert_uses:desert_cobble",
+})
+
+
+--Crafting--
+
+minetest.register_craft({
+	output = 'default:desert_stone_brick',
+	recipe = {
+		{'default:desert_stone', 'default:desert_stone'},
+		{'default:desert_stone', 'default:desert_stone'},
+	}
+})
+
+
+
 -- Stairs -----------------------------
 -- Desert Cobble
 stairs.register_stair_and_slab("desert_cobble", "desert_uses:desert_cobble",
